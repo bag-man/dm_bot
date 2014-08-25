@@ -63,7 +63,7 @@ while True:
   for submission in submissions:
     if submission.domain == "dailymail.co.uk" and submission.id not in postedOn:
       print "We got one!"
-      getScreenShot(submission.url)
+      getScreenShot(submission.url.rstrip())
       image = i.upload_image("screenshot.png")
       googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
       googleUrl = googleUrl.replace(" ","+")
