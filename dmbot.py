@@ -57,11 +57,14 @@ r = praw.Reddit(user_agent='DM_Bot')
 r.login('DM_Bot', 'totallyNotMyPassword')
 
 print "Logged in"
+first = True
 
 while True:
-  submissions = r.get_subreddit('all').get_new(limit=100)
+  submissions = r.get_domain_listing('dailymail.com', sort='new',limit=100)
   for submission in submissions:
-    if submission.domain == "dailymail.co.uk" and submission.id not in postedOn:
+    if first == True:
+      postedOn.append(submission.id)
+    if submission.id not in postedOn:
       print "We got one!"
       getScreenShot(submission.url.rstrip())
       image = i.upload_image("screenshot.png")
@@ -69,3 +72,5 @@ while True:
       googleUrl = googleUrl.replace(" ","+")
       submission.add_comment(comment % (image.link, googleUrl)) 
       postedOn.append(submission.id)
+  first = False
+
