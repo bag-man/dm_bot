@@ -7,7 +7,7 @@ To intsall this bot you need
 
     pip install praw pyimgur selenium Pillow xvfbwrapper
     
-And the program xvfb, you can probably find it in your distributions repo's.
+And the program xvfb, you can probably find it in your distributions repo's. You also need firefox installed to help get the screenshot!
 
 ![A picture of the output](http://i.imgur.com/ZtaRxJj.png)
 
