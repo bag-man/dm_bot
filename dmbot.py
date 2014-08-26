@@ -60,7 +60,7 @@ print "Logged in"
 first = True
 
 while True:
-  submissions = r.get_domain_listing('dailymail.com', sort='new',limit=100)
+  submissions = r.get_domain_listing('dailymail.co.uk', sort='new',limit=100)
   for submission in submissions:
     if first == True:
       postedOn.append(submission.id)
