@@ -48,6 +48,9 @@ You can view an image of the article [here](%s) instead of visiting their page.
 
 Or you can find another news source [here](https://www.google.co.uk/#q=%s+-site:dailymail.co.uk).
 
+*****
+^(If you want to stop this bot posting in your sub-reddit, please message /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot). 
+
 """
 
 clientId = "2c85eab2ef18353"
