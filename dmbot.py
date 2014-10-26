@@ -35,7 +35,7 @@ def getScreenShot(url):
 
   vdisplay.stop()
 
-comment =\
+longComment =\
 """
 Please don't post Daily Mail links!
 
@@ -48,16 +48,26 @@ You can view an image of the article [here](%s) instead of visiting their page.
 
 Or you can find another news source [here](https://www.google.co.uk/#q=%s+-site:dailymail.co.uk).
 
+
 *****
 ^(If you want to stop this bot posting in your sub-reddit, please message /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot). 
 
 """
 
+comment =\
+"""
+[Non-Daily Mail Mirror](%s)
+
+^(Created by /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot). 
+"""
+
+
 clientId = "2c85eab2ef18353"
 postedOn = []
 i = pyimgur.Imgur(clientId)
 r = praw.Reddit(user_agent='DM_Bot')
-r.login('DM_Bot', 'totallyNotMyPassword')
+r.login('DailMail_Bot', 'notmyactualpassword')
+reddits = {'politic', 'dailymail', 'theredpill'}
 
 print "Logged in"
 first = True
@@ -65,15 +75,19 @@ first = True
 while True:
   submissions = r.get_domain_listing('dailymail.co.uk', sort='new',limit=100)
   for submission in submissions:
-    if first == True:
-      postedOn.append(submission.id)
-    if submission.id not in postedOn:
-      print "We got one!"
-      getScreenShot(submission.url.rstrip())
-      image = i.upload_image("screenshot.png")
-      googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
-      googleUrl = googleUrl.replace(" ","+")
-      submission.add_comment(comment % (image.link, googleUrl)) 
-      postedOn.append(submission.id)
+    if str(submission.subreddit).lower() not in reddits:
+      if first == True:
+	postedOn.append(submission.id)
+      if submission.id not in postedOn:
+	print "We got one! " + submission.short_link
+	getScreenShot(submission.url.rstrip())
+        try:
+	  image = i.upload_image("screenshot.png")
+	except:
+	  image.link = "Sorry no image!"
+	googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
+	googleUrl = googleUrl.replace(" ","+")
+	submission.add_comment(comment % (image.link))#, googleUrl)) 
+	postedOn.append(submission.id)
+        print "Posted!"
   first = False
-
