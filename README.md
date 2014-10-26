@@ -11,4 +11,4 @@ And the program xvfb, you can probably find it in your distributions repo's. You
 
 ![A picture of the output](http://i.imgur.com/ZtaRxJj.png)
 
-[Link to /u/dm_bot, see him in action!](http://www.reddit.com/user/dm_bot)
+[Link to /u/DailMail_Bot, see him in action!](http://www.reddit.com/user/DailMail_Bot)
