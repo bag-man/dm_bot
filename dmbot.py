@@ -53,6 +53,7 @@ Or you can find another news source [here](https://www.google.co.uk/#q=%s+-site:
 *****
 ^(If you want to stop this bot posting in your sub-reddit, please message /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot). 
 
+//	This comment is no longer used, people didn't like it. 
 //	googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
 //	googleUrl = googleUrl.replace(" ","+")
 """
