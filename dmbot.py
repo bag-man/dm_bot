@@ -1,3 +1,4 @@
+import urllib
 import praw
 import pyimgur
 import string
@@ -52,6 +53,8 @@ Or you can find another news source [here](https://www.google.co.uk/#q=%s+-site:
 *****
 ^(If you want to stop this bot posting in your sub-reddit, please message /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot). 
 
+//	googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
+//	googleUrl = googleUrl.replace(" ","+")
 """
 
 comment =\
@@ -66,8 +69,8 @@ clientId = "2c85eab2ef18353"
 postedOn = []
 i = pyimgur.Imgur(clientId)
 r = praw.Reddit(user_agent='DM_Bot')
-r.login('DailMail_Bot', 'notmyactualpassword')
-reddits = {'politic', 'dailymail', 'theredpill'}
+r.login('DailMail_Bot', 'NotMyPassword')
+reddits = {'politic', 'dailymail'}
 
 print "Logged in"
 first = True
@@ -76,18 +79,24 @@ while True:
   submissions = r.get_domain_listing('dailymail.co.uk', sort='new',limit=100)
   for submission in submissions:
     if str(submission.subreddit).lower() not in reddits:
+
       if first == True:
 	postedOn.append(submission.id)
+
       if submission.id not in postedOn:
 	print "We got one! " + submission.short_link
-	getScreenShot(submission.url.rstrip())
+
+	if submission.domain == "dailymail.co.uk":
+	  getScreenShot(submission.url.rstrip())
+        elif submission.domain == "i.dailymail.co.uk":
+	 urllib.urlretrieve(submission.url, "screenshot.png") 
+
         try:
 	  image = i.upload_image("screenshot.png")
+	  submission.add_comment(comment % (image.link))
+	  print "Posted!"
 	except:
-	  image.link = "Sorry no image!"
-	googleUrl = re.sub('[%s]' % re.escape(string.punctuation), '', submission.title)
-	googleUrl = googleUrl.replace(" ","+")
-	submission.add_comment(comment % (image.link))#, googleUrl)) 
+	  print "Failed to submit."
+
 	postedOn.append(submission.id)
-        print "Posted!"
   first = False
