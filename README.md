@@ -7,13 +7,13 @@ It works by spawning an isntance of Firefox 27 in an Xvfb virtual screen (So it 
 
 Needs all this installed to work: 
 
-* praw  - get reddit posts and comment on them
-* selenium - get screenshot through firefox
-* pillow - crop screenshot to just the article
-* xvfb- allows firefox to run hidden
-* firefox 27 - renders the page for the screenshot
-* libjpeg8 - alloows pillow to save as jpeg
-* xvfbwrapper  - use xvfb from python
+* praw        - get reddit posts and comment on them
+* selenium    - get screenshot through firefox
+* pillow      - crop screenshot to just the article
+* xvfb        - allows firefox to run hidden
+* firefox 27  - renders the page for the screenshot
+* libjpeg8    - alloows pillow to save as jpeg
+* xvfbwrapper - use xvfb from python
 
 ![A picture of the output](http://i.imgur.com/gFrtGnb.png)
 
