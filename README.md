@@ -8,7 +8,6 @@ It works by spawning an isntance of Firefox 27 in an Xvfb virtual screen (So it 
 Needs all this installed to work: 
 
 * praw 
-* pyimgur 
 * selenium 
 * pillow 
 * xvfbwrapper
