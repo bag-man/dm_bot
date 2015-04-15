@@ -9,6 +9,7 @@ This bot is more of a learning exercise than anything else, however if it can he
 * pillow 
 * xvfbwrapper
 * firefox 27
+* libjpeg8
 * xvfb
     
 
