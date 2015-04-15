@@ -15,4 +15,4 @@ This bot is more of a learning exercise than anything else, however if it can he
 
 ![A picture of the output](http://i.imgur.com/gFrtGnb.png)
 
-[Link to /u/DailMail_Bot. See him in action!](http://www.reddit.com/user/DailMail_Bot?sort=top)
+[Link to /u/DailMail_Bot. See him in action!](http://www.reddit.com/user/DailMail_Bot)
