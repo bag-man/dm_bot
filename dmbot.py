@@ -43,22 +43,27 @@ fox = webdriver.Firefox()
 comment = """
 [Non-Daily Mail Mirror](%s)
 
-^(Created by /u/Midasx. Code on) ^[github](https://github.com/bag-man/dm_bot).
+^^Code ^^on ^^[github](https://github.com/bag-man/dm_bot).
 """
 
 postedOn = []
 r = praw.Reddit(user_agent='DM_Mirror')
 
-r.login('DailMail_Bot', 'THISISDEFINITELYNOTMYPASSWORD')
+r.login('DailMail_Bot', 'asdf1234')
 
-reddits = {'politic', 'dailymail'}
+reddits = {'reddevils', 'politic', 'dailymail'}
 
 print "Logged in"
 first = True
 
 while True:
-    submissions = r.get_domain_listing('dailymail.co.uk', sort='new', limit=50)
-    for submission in submissions:
+    try:
+        posts = r.get_domain_listing('dailymail.co.uk', sort='new', limit=10)
+    except Exception, e:
+        print "Reddits down?!"
+        print e
+
+    for submission in posts:
         if str(submission.subreddit).lower() not in reddits:
             if first is True:
                 postedOn.append(submission.id)
