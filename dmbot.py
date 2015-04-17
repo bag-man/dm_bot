@@ -43,7 +43,7 @@ fox = webdriver.Firefox()
 comment = """
 [Non-Daily Mail Mirror](%s)
 
-^^Code ^^on ^^[github](https://github.com/bag-man/dm_bot).
+^(Code on) ^[github](https://github.com/bag-man/dm_bot).
 """
 
 postedOn = []
