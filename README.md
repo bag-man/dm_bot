@@ -1,7 +1,7 @@
 dm_bot
 ======
 
-This bot is more of a learning exercise than anything else, however if it can help to cut down on the Daily Mails ad revenue then all the better!
+This bot is more of a learning exercise than anything else, no harm intended. 
 
 It works by spawning an isntance of Firefox 27 in an Xvfb virtual screen (So it can be ran headless), then using selenium to grab a screenshot of the whole page and mark some points for reference. The next step is to crop just the article out of the page by using pillow, and then save it as a jpg to save bandwidth. Once it has done that it can post a comment on the reddit post with a link to the image. 
 
