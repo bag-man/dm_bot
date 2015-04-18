@@ -29,7 +29,7 @@ def getScreenShot(url):
     left = location['x']
     top = location['y']
     right = location['x'] + size['width']
-    bottom = location['y'] + end['y'] - 510
+    bottom = location['y'] + end['y'] - 500
 
     im = im.crop((left, top, right, bottom))
     im.save('screenshot.jpg', "JPEG")
