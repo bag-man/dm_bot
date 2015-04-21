@@ -93,7 +93,7 @@ while True:
         time.sleep(5)
         first = False
     except Exception, e:
-        print "Reddits down?!"
+        print "Reddit's down?!"
         print e
 fox.quit()
 vdisplay.stop()
