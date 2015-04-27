@@ -11,7 +11,8 @@ Needs all this installed to work:
 * selenium    - get screenshot through firefox
 * pillow      - crop screenshot to just the article
 * libjpeg8    - allows pillow to save as jpeg
-* phantom.js  - renders the screenshot
+* phantom.js  - renders the screenshot 
+
 ![A picture of the output](http://i.imgur.com/gFrtGnb.png)
 
 [Link to /u/DailMail_Bot. See him in action!](http://www.reddit.com/user/DailMail_Bot)
