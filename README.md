@@ -8,7 +8,7 @@ It works by using phantom.js and selenium to grab a screenshot of the whole page
 Needs all this installed to work:
 
 * praw        - get reddit posts and comment on them
-* selenium    - get screenshot through firefox
+* selenium    - get screenshot through phantom.js
 * pillow      - crop screenshot to just the article
 * libjpeg8    - allows pillow to save as jpeg
 * phantom.js  - renders the screenshot 
