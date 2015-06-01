@@ -9,7 +9,6 @@ from PIL import Image
 
 
 def getScreenShot(url):
-    # http://stackoverflow.com/a/6300672
     # http://stackoverflow.com/a/15870708
 
     driver.get(url)
