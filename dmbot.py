@@ -45,8 +45,7 @@ comment = """
 postedOn = []
 r = praw.Reddit(user_agent='DM_Mirror')
 
-#r.login('DailMail_Bot', 'asdf1234')
-r.login('lostboysdg', 'wecdutax')
+r.login('DailMail_Bot', 'asdf1234')
 
 reddits = {'reddevils', 'politic', 'dailymail'}
 
