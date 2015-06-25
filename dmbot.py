@@ -73,7 +73,7 @@ while True:
 
                     try:
                         res = requests.post(
-                            url="http://img.loveisover.me/upload.php",
+                            url="http://xpo.pw/upload.php",
                             files={"files[]": open("screenshot.jpg", "rb")}
                         )
                         # Returns a dictionary-like json object which has
@@ -85,7 +85,7 @@ while True:
                         json_object = json.loads(res.text)[u'files']
                         # link is an list that is of length 1 and contains a
                         # dictionary
-                        link = "http://a.loveisover.me/" + json_object[0][u'url']
+                        link = "http://u.xpo.pw/" + json_object[0][u'url']
                         submission.add_comment(comment % (link))
                         print "Posted!"
                     except Exception, e:
