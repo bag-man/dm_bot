@@ -3,6 +3,7 @@ import praw
 import os
 import requests
 import time
+import ast
 
 from selenium import webdriver
 from PIL import Image
@@ -72,10 +73,14 @@ while True:
 
                     try:
                         res = requests.post(
-                            url="https://0x0.st",
+                            url="https://api.teknik.io/upload/post",
                             files={"file": open("screenshot.jpg", "rb")}
                         )
-                        link = res._content
+
+                        data = ast.literal_eval(res._content[1:-1])
+                        name = data["results"]["file"]["name"]
+                        link = "https://u.teknik.io/" + name
+
                         submission.add_comment(comment % (link))
                         print "Posted!"
                     except Exception, e:
