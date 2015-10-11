@@ -3,7 +3,6 @@ import praw
 import os
 import requests
 import time
-import json
 
 from selenium import webdriver
 from PIL import Image
@@ -73,19 +72,10 @@ while True:
 
                     try:
                         res = requests.post(
-                            url="http://xpo.pw/upload.php",
-                            files={"files[]": open("screenshot.jpg", "rb")}
+                            url="https://0x0.st",
+                            files={"file": open("screenshot.jpg", "rb")}
                         )
-                        # Returns a dictionary-like json object which has
-                        # attributes like:
-                        # success: true/false
-                        # files:
-                        # name:
-                        # url:
-                        json_object = json.loads(res.text)[u'files']
-                        # link is an list that is of length 1 and contains a
-                        # dictionary
-                        link = "http://u.xpo.pw/" + json_object[0][u'url']
+                        link = res._content
                         submission.add_comment(comment % (link))
                         print "Posted!"
                     except Exception, e:
