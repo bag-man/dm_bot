@@ -1,11 +1,10 @@
 import requests
-import ast
+import json
 
 res = requests.post(
-    url="https://api.teknik.io/upload/post",
-    files={"file": open("screenshot.jpg", "rb")}
+    url="http://pomf.cat/upload.php",
+    files={"files[]": open("screenshot.jpg", "rb")}
 )
 
-data = ast.literal_eval(res._content[1:-1])
-
-print "https://u.teknik.io/" + data["results"]["file"]["name"]
+data = json.loads(res._content)
+print data["files"][0]["url"]

@@ -18,3 +18,5 @@ Needs all this installed to work:
 [Link to /u/DailMail_Bot. See him in action!](http://www.reddit.com/user/DailMail_Bot)
 
 I was originally using imgur, however imgur would compress images over 1MB so [they were unreadable.](https://i.imgur.com/CQ5tLg1.jpg) I now use [a.pomf.se](http://a.pomf.se/sodjxu.jpg) as it allows for the full image to be shown.
+
+I am aware the code is not in good shape, I keep just patching it manually to keep up with new image hosts, it is just intended to be a fun script, not a work of art!

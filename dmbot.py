@@ -3,7 +3,7 @@ import praw
 import os
 import requests
 import time
-import ast
+import json
 
 from selenium import webdriver
 from PIL import Image
@@ -66,21 +66,19 @@ while True:
                         try:
                             getScreenShot(submission.url.rstrip())
                         except Exception, e:
-                            print "Failed to get image:"
+                            print "Failed to get image at:" + submission.url.rstrip()
                             print e
                     elif submission.domain == "i.dailymail.co.uk":
                         urllib.urlretrieve(submission.url, "screenshot.jpg")
 
+
                     try:
                         res = requests.post(
-                            url="https://api.teknik.io/upload/post",
-                            files={"file": open("screenshot.jpg", "rb")}
+                            url="http://pomf.cat/upload.php",
+                            files={"files[]": open("screenshot.jpg", "rb")}
                         )
-
-                        data = ast.literal_eval(res._content[1:-1])
-                        name = data["results"]["file"]["name"]
-                        link = "https://u.teknik.io/" + name
-
+                        data = json.loads(res._content)
+                        link = "http://a.pomf.cat/" + data["files"][0]["url"]
                         submission.add_comment(comment % (link))
                         print "Posted!"
                     except Exception, e:
