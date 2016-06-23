@@ -74,7 +74,7 @@ while True:
 
                     try:
                         res = requests.post(
-                            url="http://pomf.cat/upload.php",
+                            url="https://filebunker.pw/upload.php",
                             files={"files[]": open("screenshot.jpg", "rb")}
                         )
                         data = json.loads(res._content)
