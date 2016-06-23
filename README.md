@@ -20,3 +20,61 @@ Needs all this installed to work:
 I was originally using imgur, however imgur would compress images over 1MB so [they were unreadable.](https://i.imgur.com/CQ5tLg1.jpg) I now use [a.pomf.se](http://a.pomf.se/sodjxu.jpg) as it allows for the full image to be shown.
 
 I am aware the code is not in good shape, I keep just patching it manually to keep up with new image hosts, it is just intended to be a fun script, not a work of art!
+
+I have been banned from: 
+  * /r/sydney
+  * /r/texas
+  * /r/imagesofthe1970s
+  * /r/ImagesOfThe2010s
+  * /r/ImagesOfEngland
+  * /r/DoctorWhumour
+  * /r/historyblogs
+  * /r/nufcirclejerk
+  * /r/nufcirclejerk
+  * /r/The_Donald
+  * /r/Mr_Trump
+  * /r/Minecraft
+  * /r/ireland
+  * /r/youranonnews
+  * /r/army
+  * /r/Conservatives_R_Us
+  * /r/conservatives
+  * /r/skeptic
+  * /r/hipsterhuskies
+  * /r/science
+  * /r/SandersForPresident
+  * /r/politota
+  * /r/UKIP
+  * /r/ukipparty
+  * /r/gaming
+  * /r/Romania
+  * /r/worldnews
+  * /r/photoshopbattles
+  * /r/unitedkingdom
+  * /r/funfacts
+  * /r/travel
+  * /r/China
+  * /r/interestingasfuck
+  * /r/conspiratard
+  * /r/inthenews
+  * /r/funny
+  * /r/politics
+  * /r/NaziHunting
+  * /r/Celebs
+  * /r/Conservative
+  * /r/UpliftingNews
+  * /r/WTF
+  * /r/news
+  * /r/AnyMore
+  * /r/necrodancer
+  * /r/celebnsfw
+  * /r/space
+  * /r/reactiongifs
+  * /r/nottheonion
+  * /r/ukpolitics
+  * /r/WhiteRights
+  * /r/unitedkingdom
+  * /r/european
+  * /r/ebola
+  * /r/soccer
+
