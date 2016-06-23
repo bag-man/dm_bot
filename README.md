@@ -78,3 +78,4 @@ I have been banned from:
   * /r/ebola
   * /r/soccer
 
+[List of potential image hosts](https://docs.google.com/spreadsheets/d/1kh1TZdtyX7UlRd55OBxf7DB-JGj2rsfWckI0FPQRYhE/edit#gid=0)
