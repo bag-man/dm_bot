@@ -78,7 +78,7 @@ while True:
                             files={"files[]": open("screenshot.jpg", "rb")}
                         )
                         data = json.loads(res._content)
-                        link = "http://a.pomf.cat/" + data["files"][0]["url"]
+                        link = data["files"][0]["url"]
                         submission.add_comment(comment % (link))
                         print "Posted!"
                     except Exception, e:
