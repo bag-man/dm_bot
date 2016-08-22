@@ -68,7 +68,7 @@ The above links were automatically generated. If they don't work, [here is a scr
 """
 
 postedOn = []
-r = praw.Reddit(user_agent='Non-DM Mirror Helper. See /u/pizza_phoenix')
+r = praw.Reddit(user_agent='Non-DM Mirror Helper')
 
 r.login(reddit_user_id, reddit_password)
 
