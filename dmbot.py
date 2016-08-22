@@ -4,7 +4,6 @@ import os
 import requests
 import time
 import json
-import datetime
 
 from selenium import webdriver
 from PIL import Image
