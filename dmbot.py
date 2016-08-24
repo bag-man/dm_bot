@@ -15,10 +15,13 @@ import itertools, sys
 def findAnother(search_term, api_key, cse_id, **kwargs):
     service = build("customsearch", "v1", developerKey=api_key)
     res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
+
     return res['items']
 
 def getScreenShot(url):
     # http://stackoverflow.com/a/15870708
+
+    driver = webdriver.PhantomJS()
 
     driver.get(url)
 
@@ -47,6 +50,8 @@ def getScreenShot(url):
     im = im.crop((left, top, right, bottom))
     im.save('screenshot.jpg', "JPEG")
 
+    driver.quit()
+
     return foundsources, term
 
 # set livemode to False to disable comment posting
@@ -54,8 +59,6 @@ def getScreenShot(url):
 livemode = True
 
 spinner = itertools.cycle(['-', '\\', '|', '/'])
-
-driver = webdriver.PhantomJS()
 
 comment = """
 
@@ -160,4 +163,3 @@ while True:
     except Exception, e:
         print e
 
-driver.quit()
